@@ -251,3 +251,110 @@ article .pris {
 #om-oss h2 {
   grid-column: 1 / -1;
 }
+
+/* ===== Dag 7: Responsiv design (mobile first) ===== */
+
+/* Bas: gäller alla skärmar, byggd för ~360 px.
+   En kolumn, måttlig padding, inga fasta bredder. */
+header {
+  padding: 12px 16px;
+}
+
+header h1 {
+  font-size: 1.5rem;
+}
+
+nav ul {
+  flex-wrap: wrap;
+  gap: 4px 16px;
+}
+
+/* Större tryckyta på länkarna i menyn */
+nav a {
+  display: inline-block;
+  padding: 10px 4px;
+}
+
+main {
+  padding: 16px;
+}
+
+#hero {
+  padding: 24px 16px;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+footer {
+  padding: 24px 16px;
+}
+
+/* Breakpoint 1: 600 px - mer luft, större hero-rubrik */
+@media (min-width: 600px) {
+  header {
+    padding: 16px 24px;
+  }
+
+  header h1 {
+    font-size: 1.75rem;
+  }
+
+  main {
+    padding: 32px 24px;
+  }
+
+  #hero {
+    padding: 40px 32px;
+  }
+
+  #hero h2 {
+    font-size: 2.25rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  footer {
+    padding: 24px;
+  }
+}
+
+/* Breakpoint 2: 900 px - Om oss i två kolumner, bredare sidhuvud */
+@media (min-width: 900px) {
+  header {
+    padding: 20px 48px;
+  }
+
+  nav ul {
+    gap: 4px 28px;
+  }
+
+  main {
+    padding: 48px 48px;
+  }
+
+  #hero {
+    padding: 56px 48px;
+  }
+
+  #hero h2 {
+    font-size: 2.75rem;
+  }
+
+  #om-oss {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+
+  #om-oss img {
+    grid-column: 2;
+    grid-row: 2 / span 2;
+  }
+
+  footer {
+    padding: 32px 48px;
+  }
+}
